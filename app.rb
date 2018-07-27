@@ -1,5 +1,5 @@
 require_relative 'config/environment'
-
+require 'pry'
 class App < Sinatra::Base
 
   configure do
@@ -16,6 +16,7 @@ class App < Sinatra::Base
   @item = params[:item]
   session[:item] = @item
   @session = session
+
   erb :checkout
   end
 
